@@ -1,0 +1,121 @@
+#feedback {
+  background-color: #000;
+  color: #fff;
+  padding-bottom: 0;
+  .wt-section-title:before {
+    background: url(../img/line_left_light.svg);
+  }
+  ._ml {
+    margin-left: 90px;
+  }
+  .border-text {
+    padding: 15px;
+    border: 1px solid #fff;
+    max-width: 125px;
+  }
+  form#contactForm {
+    .form-row {
+      justify-content: center;
+      label {
+        margin-right: 20px;
+        margin-bottom: 5px;
+        align-self: flex-end;
+        letter-spacing: 0.1em;
+        min-width: 85px;
+      }
+      label[for="inputTel"] {
+        min-width: 150px;
+      }
+      .form-control {
+        border-radius: 0;
+        padding: 0;
+        height: calc(2rem + 2px);
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        margin-bottom: 0;
+        border-bottom: 1px solid #fff;
+        letter-spacing: 0.1em;
+        color: #fff;
+        font-size: 14px;
+        &:focus {
+          border-color: #00C2FF;
+          box-shadow: none;
+          &+ .dot{
+            border-color: #00C2FF;
+          }
+        }
+      }
+      .dot {
+        position: relative;
+        top: 29px;
+        left: 4px;
+        min-width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+      }
+      button {
+        width: 285px;
+        padding: 15px 0;
+        i {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .bottom-link {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    &:nth-child(2) {
+      margin-left: 40px;
+    }
+  }
+}
+#terms {
+  h1 {
+    font-size: 36px;
+    line-height: 40px;
+    font-family: 'Montserrat Bold',sans-serif;
+    font-weight: 700;
+    letter-spacing: .2em;
+  }
+  .wt-section-subheading {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  #feedback ._ml {
+    margin-left: 0;
+  }
+}
+@media (max-width: 767px) {
+  #feedback .border-text {
+    max-width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  #feedback img {
+    width: 190px;
+  }
+}
+@media (max-width: 408px) {
+  #feedback .bottom-link:nth-child(2) {
+    margin-left: 0;
+  }
+}
+@media (min-width: 992px) {
+  #feedback {
+    form#contactForm {
+      .form-row {
+        &>div {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+      }
+    }
+  }
+}

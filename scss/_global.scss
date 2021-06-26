@@ -1,0 +1,259 @@
+// Global styling for this template
+body {
+  overflow-x: hidden;
+  font-size: 14px;
+  @include body-font;
+  height: 100%;
+}
+body.js-no-scroll {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+}
+p {
+  line-height: 1.75;
+}
+
+a {
+  color: #212529;
+  &:hover {
+    color: lighten(#212529, 10%);
+  }
+}
+._preloader {
+  display: none;
+}
+.dot {
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin-left: -4px;
+  border: 1px solid #FFFFFF;
+}
+.wt-block-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -2;
+  border-radius: inherit;
+  .wt-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+section {
+  padding: 75px 0;
+  .wt-section-title {
+    position: relative;
+    font-size: 30px;
+    line-height: 1.18;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.2em;
+    margin-left: 90px;
+    word-break: break-word;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 508px;
+      height: 9px;
+      background: url(../img/line_left_dark.svg);
+      top: 13px;
+      left: -49%;
+    }
+  }
+  p.wt-section-subtitle {
+    font-size: 18px;
+    line-height: 1.5;
+    width: 100%;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    font-style: normal;
+    letter-spacing: 0.1em;
+    &:before {
+      content: "";
+      display: inline-block;
+      background: url(../img/arrow_left.svg);
+      margin-right: 5px;
+      width: 9px;
+      height: 34px;
+      vertical-align: middle;
+      margin-bottom: 5px;
+    }
+    &:after {
+      content: "";
+      display: inline-block;
+      background: url(../img/arrow_right.svg);
+      margin-left: 5px;
+      width: 9px;
+      height: 34px;
+      vertical-align: middle;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+// Button Styles
+.btn {
+  font-size: 14px;
+  line-height: 1.2;
+  border-radius: 0;
+  border-width: 1px;
+  white-space: normal;
+}
+.wt-btn-blue {
+  background-color: #00C2FF;
+  border-color: #00C2FF;
+  color: #fff;
+  letter-spacing: 0.3em;
+  padding: 15px 65px;
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: #00C2FF !important;
+    border-color: #00C2FF !important;
+    color: #fff !important;
+  }
+  &:active,
+  &:focus {
+    box-shadow: none;
+  }
+}
+.wt-btn-transparent {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+  letter-spacing: 0.3em;
+  padding: 15px 65px;
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: transparent !important;
+    border-color: #fff !important;
+    color: #fff !important;
+  }
+  &:active,
+  &:focus {
+    box-shadow: none;
+  }
+  &.btn_blue {
+    border-color: #00C2FF;
+    color: #00C2FF;
+    &:hover,
+    &:active,
+    &:focus{
+      background-color: transparent !important;
+      border-color: #00C2FF !important;
+      color: #00C2FF !important;
+    }
+  }
+  &.btn_green {
+    border-color: #1fc32f;
+    color: #1fc32f;
+    &:hover,
+    &:active,
+    &:focus{
+      background-color: transparent !important;
+      border-color: #1fc32f !important;
+      color: #1fc32f !important;
+    }
+  }
+  &.btn_yellow {
+    border-color: #FFD600;
+    color: #FFD600;
+    &:hover,
+    &:active,
+    &:focus{
+      background-color: transparent !important;
+      border-color: #FFD600 !important;
+      color: #FFD600 !important;
+    }
+  }
+}
+
+// Highlight color customization
+::-moz-selection {
+  background: #ccc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #ccc;
+  text-shadow: none;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+// Media queries
+@media (max-width: 1199px) {
+  section .wt-section-title:before {
+    left: -63%;
+  }
+}
+@media (max-width: 991px) {
+  section .wt-section-title {
+    margin-left: 0;
+    &:before {
+      left: -74%;
+    }
+  }
+}
+@media (max-width: 767px) {
+  section {
+    padding: 40px 0;
+  }
+  section .wt-section-title {
+    font-size: 26px;
+    &:before {
+      left: -103%;
+    }
+  }
+  section p.wt-section-subtitle {
+    line-height: 1.2;
+    font-size: 15px;
+  }
+}
+@media (max-width: 575px) {
+  section .wt-section-title {
+    &:before {
+      content: none;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 740px;
+  }
+  section {
+    padding: 60px 0;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
