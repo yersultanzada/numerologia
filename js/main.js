@@ -41,12 +41,7 @@ $(document).ready(function(){
 		buttons : [
 		'close'
 		],
-		iframe : {
-			css : {
-				width : '100%',
-				maxWidth: '1170px'
-			}
-		},
+		idleTime: 10,
 		afterLoad: function () {
 			$('iframe').on('load', function(event) {
 				event.preventDefault();

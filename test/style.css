@@ -188,7 +188,6 @@ label.error { display: none !important; }
   .step-slide__title-counter { margin: 0 0 10px; }
   .step-slide__grid { padding: 0; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
   .step-slide__discount { text-align: center; padding: 30px 0 0; background-position: top center; margin-left: 0; }
-  .pick-item { text-align: center; }
   .pick-item__label { display: inline-block; }
   .last-step-form { padding: 0; }
   .last-step-form__label, .last-step-form__accept { text-align: center; }
