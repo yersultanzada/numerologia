@@ -5,33 +5,33 @@ $(document).ready(function(){
 		slidesToScroll: 1,
 		dots: false,
 		responsive: [
-		{
-			breakpoint: 981,
-			settings: {
-				slidesToShow: 2,
-				slidesToScroll: 1,
-				infinite: true,
-				dots: false
+			{
+				breakpoint: 981,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: false
+				}
+			},
+			{
+				breakpoint: 481,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: false
+				}
 			}
-		},
-		{
-			breakpoint: 481,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				infinite: true,
-				dots: false
-			}
-		}
 		]
 	});
 
 	// $(".our-works .slick-slide a").fancybox();
 	$('[data-fancybox="gallery"]').fancybox({
 		buttons : [
-		'zoom',
-		'thumbs',
-		'close'
+			'zoom',
+			'thumbs',
+			'close'
 		]
 	});
 
@@ -39,9 +39,15 @@ $(document).ready(function(){
 	var timerId = 0;
 	$(".main-btn").fancybox({
 		buttons : [
-		'close'
+			'close'
 		],
 		idleTime: 10,
+		iframe : {
+			css : {
+				width : '100%',
+				maxWidth: '1170px'
+			}
+		},
 		afterLoad: function () {
 			$('iframe').on('load', function(event) {
 				event.preventDefault();

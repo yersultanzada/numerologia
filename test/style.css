@@ -179,7 +179,27 @@ label.error { display: none !important; }
 .test-modal-button span:after { content: ""; display: inline-block; width: 23px; height: 23px; background: url("img/form-w.svg") no-repeat center; margin: 0 0 -5px 10px; }
 
 .arcticmodal-container { -webkit-overflow-scrolling: touch; overflow-y: scroll; }
-
+.contact-form__preloader {
+    height: 2px;
+    width: 100%;
+    position: relative;
+    margin: 15px 0;
+    opacity: 0;
+}
+.contact-form__preloader:before {
+    background: mediumturquoise;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    -webkit-animation: smartlidPreloader 3s infinite;
+    animation: smartlidPreloader 3s infinite;
+}
+.contact-form__input-wrapper_hidden {
+    display: none;
+}
 @media screen and (max-width: 767px) { .header-line .container { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; text-align: center; }
   .header-line__logo { margin: 0 0 15px; }
   .btn-next { margin: 0; }
@@ -199,5 +219,23 @@ label.error { display: none !important; }
 @media screen and (max-width: 480px) { .container { padding: 0 10px; }
   .last-step-form__button { font-size: 12px; padding: 14px 0; }
   .last-step-form__button span:after { width: 18px; height: 18px; margin: 0 0 -4px 5px; background-size: 100% 100%; } }
+@-webkit-keyframes smartlidPreloader {
+    0% {
+        left: 0; }
+    50% {
+        left: -webkit-calc(100% - 50px);
+        left: calc(100% - 50px); }
+    100% {
+        left: 0%; }
+}
 
+@keyframes smartlidPreloader {
+    0% {
+        left: 0; }
+    50% {
+        left: -webkit-calc(100% - 50px);
+        left: calc(100% - 50px); }
+    100% {
+        left: 0%; }
+}
 /*# sourceMappingURL=style.css.map */

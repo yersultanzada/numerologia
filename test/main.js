@@ -1,61 +1,6 @@
 $(document).ready(function() {
 
-	// var timerId = 0;
-
-	// $('#testModal').click(function(event) {
-	// 	$('#iframeModal').arcticmodal({
-	// 		container: {
-	// 			tpl: '<div class="arcticmodal-container"><table class="arcticmodal-container_i" style="width: 100%;max-width: 1170px;"><tr><td class="arcticmodal-container_i2"></td></tr></table></div>'
-	// 		},
-	// 		beforeOpen: function (data, el) {
-	// 			$('body').css('position', 'fixed');
-	// 			$('#frameOpen').html('<iframe style="width: 100%;" src="index.html" scrolling="no" frameborder="0""></iframe>');
-
-	// 			$('iframe').on('load', function(event) {
-	// 				event.preventDefault();
-	// 				frameHeight();
-	// 			});
-
-	// 			setTimeout(function() {
-	// 				frameHeightRec();
-	// 			}, 300);
-
-	// 			$(window).on('resize', function() {
-	// 				frameHeight();
-	// 			});
-	// 		},
-	// 		afterClose: function () {
-	// 			$('body').css('position', 'static');
-	// 			$('#frameOpen').html('');
-	// 			clearTimeout(timerId);
-	// 			// console.log('clear');
-	// 		}
-	// 	});
-	// });
-
-	// function frameHeight () {
-	// 	var height = $('iframe').contents().find('html').height();
-	// 	$('iframe').height(height);
-	// }
-
-	// function frameHeightRec () {
-	// 	var height = $('iframe').contents().find('html').height();
-	// 	$('iframe').height(height);
-	// 	timerId = setTimeout(function() {
-	// 		frameHeightRec();
-	// 	}, 100);
-	// 	// console.log('call');
-	// }
-
-	$('input[name="tel"]').mask('+7 (799) 999-99-99');
-
-/*	$('.step-slide__title').each(function(index, el) {
-		$(el).prepend('<div class="step-slide__title-counter">' + (index + 1) + '</div>');
-	});*/
-
-/*	for (var i = 0; i < $('.step-slide').length - 1; i++) {
-		$('.step__extender').append('<div class="step__extender-item"></div>');
-	};*/
+	$('input[type="tel"]').mask('+7 (799) 999-99-99');
 
 	var progress = {
 		current: ( 100 / ($('.step-slide').length - 1) ),
@@ -120,25 +65,4 @@ $(document).ready(function() {
 		$('.btn-next').addClass('btn-next_active btn-shine');
 	});
 
-
-
-	$('form').each(function(index, el) {
-		$(el).validate({
-			rules:{
-				"name":{ required:true },
-				"tel":{ required:true }
-			},
-			/*submitHandler: function(form){
-				$(form).ajaxSubmit({
-					type: 'POST',
-					url: './mail/php/mail.php',
-					success: function() {
-						testSlider.goToSlide( $('.step-slide').length - 1 );
-						$('.header-line').slideUp(300);
-						$('.progress-line').slideUp(300);
-					}
-				});
-			}*/
-		});
-	});
 });
